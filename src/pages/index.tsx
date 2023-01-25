@@ -19,7 +19,7 @@ const Home: NextPage = () => {
       <main className="relative flex h-[100svh] w-screen flex-col bg-[url('/img/me2.jpeg')] bg-contain bg-right bg-no-repeat">
         <div className="absolute right-0 aspect-[1709/3080] h-[100svh] ">
           <div className="relative h-full w-full">
-            <div className="h-full w-full bg-[#111111] opacity-90 sm:opacity-[.86]"></div>
+            <div className="absolute top-[50%] h-full max-h-[calc(100svw_*_1.803)] w-full translate-y-[-50%]  bg-[#111111] opacity-90 sm:opacity-[.86]"></div>
             <div className="absolute top-0 h-full w-28 bg-gradient-to-r from-[#21201Eff] to-[#21201E00] sm:from-[#282623ff] sm:to-[#28262300]"></div>
           </div>
         </div>
@@ -39,11 +39,11 @@ const Home: NextPage = () => {
               </div>
             </div>
 
-            <span className="text-md mt-8 pt-1 pl-1 font-sans  text-[#ddd] sm:hidden">
+            <span className="text-md  pt-1 pl-4 font-sans  text-[#ddd] sm:hidden">
               Software Engineer. Typescript Enthusiast.
             </span>
 
-            <a href="#" className="group mt-20 block sm:mt-12">
+            <a href="#" className="group mt-8 block sm:mt-12">
               <div className="border-1 flex items-center gap-2 border   border-transparent py-3 px-4 text-sky-500 transition-all group-hover:border-sky-500">
                 <VscCode size={24} />
                 <span className="text-lg font-semibold uppercase tracking-wider">
