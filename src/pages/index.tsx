@@ -23,7 +23,7 @@ const Home: NextPage = () => {
         <div className="z-10 flex w-full flex-1 items-center justify-center xl:w-[50%]">
           <div className="flex flex-col items-center">
             <div className="flex items-center">
-              <div className="relative h-16 w-16 sm:h-28 sm:w-28">
+              <div className="relative h-16 w-16 text-[0px] sm:h-28 sm:w-28">
                 <Image fill src="/img/logo.svg" alt="logo" />
               </div>
               <div className="ml-2 flex flex-col sm:ml-6 sm:pt-2">

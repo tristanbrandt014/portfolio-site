@@ -31,7 +31,7 @@ const WorkLayout: React.FC<Props> = (props) => {
             back to {props.slug ? "list" : "home"}
           </Link>
           <Link href="/">
-            <div className="relative h-10 w-10 sm:h-16 sm:w-16">
+            <div className="relative h-10 w-10 text-[0px] sm:h-16 sm:w-16">
               <Image fill src="/img/logo.svg" alt="logo" />
             </div>
           </Link>
