@@ -1,0 +1,17 @@
+import WorkLayout from "../../layouts/WorkLayout";
+
+export const meta = {
+  slug: "checkers-spin2win",
+};
+
+# Checkers Spin2Win
+
+During my time at Makebetter Consulting, I led the development effort on the Spin2Win gamification feature for the Checkers Rewards app. Spin2Win was a feature that allowed users to spin a wheel to win vouchers. Users would earn spins by swiping their loyalty cards at the till.
+
+This project included building the backend for keeping track of user spins, selecting the outcome of the spin, and awarding the user with a voucher, as well as the animated spin wheel itself.
+
+My personal highlight was building in the ability to configure prizes and probabilities on the fly. I built the spin wheel using the magic of trigonometry and circle geometry, allowing prizes to be added and removed, and the wheel to adjust accordingly.
+
+Another highlight was the implementation of load testing capabilities for the backend. This allowed us to test the backend in a separate environment to see how it would scale to the tens of thousands of South Africans that used it daily, many of whom were playing concurrently.
+
+export default ({ children }) => <WorkLayout {...meta}>{children}</WorkLayout>;

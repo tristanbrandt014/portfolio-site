@@ -13,7 +13,7 @@ const Home: NextPage = () => {
         <meta name="description" content="Tristan Brandt" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="relative flex h-[100svh] w-screen flex-col bg-[url('/img/me2.jpeg')] bg-contain bg-right bg-no-repeat">
+      <main className="relative flex h-[100svh] w-screen flex-col bg-[url('/img/me.jpeg')] bg-contain bg-right bg-no-repeat">
         <div className="absolute right-0 aspect-[1709/3080] h-[100svh] ">
           <div className="relative h-full w-full">
             <div className="absolute top-[50%] h-full max-h-[calc(100svw_*_1.803)] w-full translate-y-[-50%]  bg-[#111111] opacity-90 sm:opacity-[.86]"></div>
