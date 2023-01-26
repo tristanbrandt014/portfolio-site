@@ -1,7 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 import { type NextPage } from "next";
 import Head from "next/head";
 import { VscCode } from "react-icons/vsc";
-import Image from "next/image";
 import Social from "../components/Social";
 import Link from "next/link";
 
@@ -10,8 +10,30 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>Tristan Brandt</title>
-        <meta name="description" content="Tristan Brandt" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Software Engineer. Typescript Enthusiast."
+        />
+        <link
+          rel="icon"
+          href="/logo-dark.svg"
+          media="(prefers-color-scheme: dark)"
+        />
+        <link
+          rel="icon"
+          href="/logo-light.svg"
+          media="(prefers-color-scheme: light)"
+        />
+        <link
+          rel="icon"
+          href="/logo-dark.ico"
+          media="(prefers-color-scheme: dark)"
+        />
+        <link
+          rel="icon"
+          href="/logo-light.ico"
+          media="(prefers-color-scheme: light)"
+        />
       </Head>
       <main className="relative flex h-[100svh] w-screen flex-col bg-[url('/img/me.jpeg')] bg-contain bg-right bg-no-repeat">
         <div className="absolute right-0 aspect-[1709/3080] h-[100svh] ">
@@ -24,7 +46,7 @@ const Home: NextPage = () => {
           <div className="flex flex-col items-center">
             <div className="flex items-center">
               <div className="relative h-16 w-16 text-[0px] sm:h-28 sm:w-28">
-                <Image fill src="/img/logo.svg" alt="logo" />
+                <img className="h-full w-full" src="/img/logo.svg" alt="logo" />
               </div>
               <div className="ml-2 flex flex-col sm:ml-6 sm:pt-2">
                 <span className=" font-sans text-3xl font-light text-[#ddd] sm:text-6xl sm:text-[#bbb]">
@@ -50,7 +72,7 @@ const Home: NextPage = () => {
             </Link>
           </div>
         </div>
-        <div className="z-10 flex items-end justify-center gap-4 py-6">
+        <div className="z-10 flex items-end justify-center gap-4 py-4">
           <Social />
         </div>
       </main>

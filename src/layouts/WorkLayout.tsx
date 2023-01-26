@@ -1,10 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import React from "react";
-import Image from "next/image";
-import { SlArrowLeft } from "react-icons/sl";
 import Social from "../components/Social";
 import cx from "classnames";
-import workItems from "../data/workItems";
 import WorkItems from "../components/WorkItems";
 
 interface Props {
@@ -32,7 +30,7 @@ const WorkLayout: React.FC<Props> = (props) => {
           </Link>
           <Link href="/">
             <div className="relative h-10 w-10 text-[0px] sm:h-16 sm:w-16">
-              <Image fill src="/img/logo.svg" alt="logo" />
+              <img className="h-full w-full" src="/img/logo.svg" alt="logo" />
             </div>
           </Link>
         </header>
@@ -58,7 +56,11 @@ const WorkLayout: React.FC<Props> = (props) => {
               props.contentClassName
             )}
           >
-            <div className={"prose prose-invert max-w-full sm:max-w-[65ch]"}>
+            <div
+              className={
+                "prose prose-invert max-w-full prose-headings:font-medium prose-headings:text-neutral-300 prose-p:text-neutral-400 prose-a:text-sky-600 prose-a:no-underline sm:max-w-[65ch]"
+              }
+            >
               {props.children}
             </div>
           </div>

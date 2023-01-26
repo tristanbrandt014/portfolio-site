@@ -6,12 +6,12 @@ export const meta = {
 
 # Checkers Rewards
 
-During my time at Makebetter Consulting, I worked on the Checkers Rewards app. This was mostly mundane work, pulling products & specials from their apis, to render filterable lists, configurable content pages, etc.
+During my time at Makebetter Consulting, I worked on the Checkers Rewards app. This was mostly mundane work: pulling products & specials from their apis, to render filterable lists, configurable content pages, etc.
 
 My personal highlight was building a "bubble picker" component for selecting communication preferences. The options were rendered as a grid of bubbles initially and when a user selected one, it would expand, move, and push its neighbors out of the way:
 
 ![See it in action:!](/img/bubbles.gif "Bubble Picker")
 
-The movement of these bubbles was achieved by a function that minimized the amount of overlap between individual bubbles and their "anchors." While I'm sure there were more elegant solutions involving calculus and trigonometry, I managed to achieve this effect with a loop that would check the 8 cardinal directions to see which reduced the amount of overlap by the most, then move it a small distance in that direction. This process would repeat until the reduction was negligible, or max iterations were reached.
+The movement of these bubbles was achieved by a function that minimized the amount of overlap between individual bubbles and their "anchors." While I'm sure there were more elegant solutions involving calculus and trigonometry, I achieved the movement of the bubbles by using a loop to check the 8 cardinal directions and moving the bubbles in the direction that reduced the amount of overlap the most. This process would then loop until the reduction was negligible or until reaching the maximum number of iterations.
 
 export default ({ children }) => <WorkLayout {...meta}>{children}</WorkLayout>;
