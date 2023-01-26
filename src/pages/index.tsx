@@ -1,40 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 import { type NextPage } from "next";
-import Head from "next/head";
 import { VscCode } from "react-icons/vsc";
 import Social from "../components/Social";
 import Link from "next/link";
+import HeadMeta from "../components/HeadMeta";
 
 const Home: NextPage = () => {
   return (
     <>
-      <Head>
-        <title>Tristan Brandt</title>
-        <meta
-          name="description"
-          content="Software Engineer. Typescript Enthusiast."
-        />
-        <link
-          rel="icon"
-          href="/logo-dark.svg"
-          media="(prefers-color-scheme: dark)"
-        />
-        <link
-          rel="icon"
-          href="/logo-light.svg"
-          media="(prefers-color-scheme: light)"
-        />
-        <link
-          rel="icon"
-          href="/logo-dark.ico"
-          media="(prefers-color-scheme: dark)"
-        />
-        <link
-          rel="icon"
-          href="/logo-light.ico"
-          media="(prefers-color-scheme: light)"
-        />
-      </Head>
+      <HeadMeta />
       <main className="relative flex h-[100svh] w-screen flex-col bg-[url('/img/me.jpeg')] bg-contain bg-right bg-no-repeat">
         <div className="absolute right-0 aspect-[1709/3080] h-[100svh] ">
           <div className="relative h-full w-full">

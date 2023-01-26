@@ -4,6 +4,7 @@ import React from "react";
 import Social from "../components/Social";
 import cx from "classnames";
 import WorkItems from "../components/WorkItems";
+import HeadMeta from "../components/HeadMeta";
 
 interface Props {
   children?: React.ReactNode;
@@ -13,6 +14,8 @@ interface Props {
 const WorkLayout: React.FC<Props> = (props) => {
   return (
     <>
+      <HeadMeta />
+
       <main className="flex min-h-[100svh] flex-col">
         <header className="fixed top-0 flex w-full flex-row-reverse items-center justify-between bg-[#21201e] p-6 px-4  sm:bg-[#282623] sm:p-8 sm:px-12 lg:bg-transparent lg:p-12">
           <Link
