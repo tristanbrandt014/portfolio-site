@@ -1,12 +1,9 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import {
-  SlSocialInstagram,
-  SlSocialLinkedin,
-  SlScreenDesktop,
-} from "react-icons/sl";
 import { VscCode } from "react-icons/vsc";
 import Image from "next/image";
+import Social from "../components/Social";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -43,31 +40,18 @@ const Home: NextPage = () => {
               Software Engineer. Typescript Enthusiast.
             </span>
 
-            <a href="#" className="group mt-8 block sm:mt-12">
+            <Link href="/work" className="group mt-8 block sm:mt-12">
               <div className="border-1 flex items-center gap-2 border   border-transparent py-3 px-4 text-sky-500 transition-all group-hover:border-sky-500">
                 <VscCode size={24} />
                 <span className="text-lg font-semibold uppercase tracking-wider">
                   My Work
                 </span>
               </div>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="z-10 flex items-end justify-center gap-4 py-6">
-          <a
-            rel="noreferrer"
-            target="_blank"
-            href="https://www.linkedin.com/in/tristandev/"
-          >
-            <SlSocialLinkedin color="#ccc" size={24} />
-          </a>
-          <a
-            rel="noreferrer"
-            target="_blank"
-            href="https://www.instagram.com/tristanbrandt014/"
-          >
-            <SlSocialInstagram color="#ccc" size={20} />
-          </a>
+          <Social />
         </div>
       </main>
     </>
