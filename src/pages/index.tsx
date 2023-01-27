@@ -4,14 +4,61 @@ import { VscCode } from "react-icons/vsc";
 import Social from "../components/Social";
 import Link from "next/link";
 import HeadMeta from "../components/HeadMeta";
+import { useEffect, useState } from "react";
+import cx from "classnames";
 
 const Home: NextPage = () => {
+  const [show, setShow] = useState(false);
+  const [ready, setReady] = useState(false);
+  useEffect(() => {
+    const img = document.createElement("img");
+
+    const timeout = setTimeout(() => {
+      setReady(true);
+    }, 10);
+    img.src = "/img/me.jpeg";
+
+    img.onload = () => {
+      clearTimeout(timeout);
+      setShow(true);
+    };
+  }, []);
+
   return (
     <>
       <HeadMeta />
-      <main className="relative flex h-[100svh] w-screen flex-col bg-[url('/img/me.jpeg')] bg-contain bg-right bg-no-repeat">
+      <main
+        className={cx(
+          "relative flex h-[100svh]  w-screen flex-col bg-[url('/img/me.jpeg')] bg-contain bg-right bg-no-repeat transition-all duration-100",
+          {
+            "bg-top-[-1000px]": !show,
+            "opacity-100": ready || show,
+            "opacity-0": !ready && !show,
+          }
+        )}
+      >
+        <div
+          className={cx(
+            "pointer-events-none absolute top-0 z-50 flex h-screen w-screen items-center justify-center bg-[#21201Eff] transition-all duration-500 sm:bg-[#282623ff]",
+            {
+              "opacity-0": show,
+              hidden: !ready,
+            }
+          )}
+        >
+          <div
+            className={cx("lds-ellipsis", {
+              hidden: show,
+            })}
+          >
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
         <div className="absolute right-0 aspect-[1709/3080] h-[100svh] ">
-          <div className="relative h-full w-full">
+          <div className={cx("relative h-full w-full")}>
             <div className="absolute top-[50%] h-full max-h-[calc(100svw_*_1.803)] w-full translate-y-[-50%]  bg-[#111111] opacity-90 sm:opacity-[.86]"></div>
             <div className="absolute top-0 h-full w-28 bg-gradient-to-r from-[#21201Eff] to-[#21201E00] sm:from-[#282623ff] sm:to-[#28262300]"></div>
           </div>

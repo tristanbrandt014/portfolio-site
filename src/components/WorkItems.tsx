@@ -20,7 +20,7 @@ const WorkItems: React.FC<Props> = (props) => {
             }
           )}
           href={`/work/${item.slug}`}
-          key="item"
+          key={item.slug}
         >
           {item.title}
         </Link>
