@@ -1,6 +1,7 @@
 import type { AppType } from "next/app";
 import posthog from "posthog-js";
 import { clientEnv } from "../env/schema.mjs";
+import "../styles/globals.css";
 
 
 if (typeof window !== 'undefined') { // checks that we are client-side
