@@ -28,12 +28,6 @@ const config = {
     defaultLocale: "en",
   },
   pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
-  redirects: () => [
-    {
-      source: "/work",
-      destination: "/work/zepz",
-      permanent: false
-    }
-  ],
+  redirects: () => [],
 };
 export default withMDX(config);
