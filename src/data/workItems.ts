@@ -5,6 +5,10 @@ interface WorkItem {
 
 const workItems: WorkItem[] = [
   {
+    title: "Zepz",
+    slug: "zepz",
+  },
+  {
     title: "The Foschini Group",
     slug: "tfg",
   },
@@ -15,15 +19,7 @@ const workItems: WorkItem[] = [
   {
     title: "Checkers Rewards",
     slug: "checkers-rewards",
-  },
-  {
-    title: "Low Code Scraper",
-    slug: "scraper",
-  },
-  {
-    title: "PetRock",
-    slug: "petrock",
-  },
+  }
 ];
 
 export default workItems;

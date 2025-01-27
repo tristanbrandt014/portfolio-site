@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
+import cx from "classnames";
 import Link from "next/link";
 import React from "react";
-import Social from "../components/Social";
-import cx from "classnames";
-import WorkItems from "../components/WorkItems";
 import HeadMeta from "../components/HeadMeta";
+import Social from "../components/Social";
+import WorkItems from "../components/WorkItems";
 
 interface Props {
   children?: React.ReactNode;
@@ -61,7 +61,7 @@ const WorkLayout: React.FC<Props> = (props) => {
           >
             <div
               className={
-                "prose prose-invert max-w-full prose-headings:font-medium prose-headings:text-neutral-300 prose-p:text-neutral-400 prose-a:text-sky-600 prose-a:no-underline sm:max-w-[65ch]"
+                "prose prose-invert max-w-full prose-headings:font-medium prose-headings:text-neutral-300 prose-p:text-neutral-400 prose-a:text-sky-600 prose-a:no-underline sm:max-w-[65ch] prose-li:text-neutral-400"
               }
             >
               {props.children}
